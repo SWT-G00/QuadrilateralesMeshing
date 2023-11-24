@@ -43,6 +43,8 @@ window.onload = function () {
   
       if(isDrawing){
         context.lineTo(mouseX, mouseY);
+        console.log(mouseX + "  -  "   )
+        console.log(mouseX + "  -  "  )
         context.stroke();
       }
     });
@@ -55,8 +57,8 @@ window.onload = function () {
   
     // Handle Mouse Coordinates
     function setMouseCoordinates(event) {
-      mouseX = event.clientX - boundings.left;
-      mouseY = event.clientY - boundings.top;
+      mouseX = (event.clientX - boundings.left) ;
+      mouseY = (event.clientY - boundings.top) ;
     }
   
     // Handle Clear Button
