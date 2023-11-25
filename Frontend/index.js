@@ -11,6 +11,9 @@ window.onload = function () {
     context.strokeStyle = 'black'; // initial brush color
     context.lineWidth = 1; // initial brush width
     var isDrawing = false;
+    var firstTouch = true;
+    var firstTouchMouseX = 0;
+    var firstTouchMouseY = 0;
   
   
     // Handle Colors
@@ -29,12 +32,19 @@ window.onload = function () {
   
     // Mouse Down Event
     canvas.addEventListener('mousedown', function(event) {
+      
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      firstTouch = true;
+
       setMouseCoordinates(event);
       isDrawing = true;
-  
+
+      
       // Start Drawing
       context.beginPath();
       context.moveTo(mouseX, mouseY);
+      
+
     });
   
     // Mouse Move Event
@@ -43,15 +53,20 @@ window.onload = function () {
   
       if(isDrawing){
         context.lineTo(mouseX, mouseY);
-        console.log(mouseX + "  -  "   )
-        console.log(mouseX + "  -  "  )
         context.stroke();
+
+        
       }
     });
+  
+  
   
     // Mouse Up Event
     canvas.addEventListener('mouseup', function(event) {
       setMouseCoordinates(event);
+
+      context.lineTo(firstTouchMouseX, firstTouchMouseY);
+      context.stroke();
       isDrawing = false;
     });
   
@@ -59,6 +74,12 @@ window.onload = function () {
     function setMouseCoordinates(event) {
       mouseX = (event.clientX - boundings.left) ;
       mouseY = (event.clientY - boundings.top) ;
+
+      if (firstTouch){
+        firstTouchMouseX = mouseX;
+        firstTouchMouseY = mouseY;
+        firstTouch = false;
+      } 
     }
   
     // Handle Clear Button
