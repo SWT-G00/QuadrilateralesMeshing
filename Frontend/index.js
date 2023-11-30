@@ -8,8 +8,8 @@ window.onload = function () {
     // Specifications
     var mouseX = 0;
     var mouseY = 0;
-    context.strokeStyle = 'black'; // initial brush color
-    context.lineWidth = 1; // initial brush width
+    context.strokeStyle = '#6edff6'; // initial brush color
+    context.lineWidth = 3; // initial brush width
     var isDrawing = false;
     var firstTouch = true;
     var firstTouchMouseX = 0;
@@ -17,26 +17,30 @@ window.onload = function () {
   
   
     // Handle Colors
+    /*
     var colors = document.getElementsByClassName('colors')[0];
   
     colors.addEventListener('click', function(event) {
       context.strokeStyle = event.target.value || 'black';
     });
+    */
   
     // Handle Brushes
-    var brushes = document.getElementsByClassName('brushes')[0];
+    /*var brushes = document.getElementsByClassName('brushes')[0];
   
     brushes.addEventListener('click', function(event) {
       context.lineWidth = event.target.value || 1;
     });
-  
+    */
+
+
     // Mouse Down Event
     canvas.addEventListener('mousedown', function(event) {
       
       context.clearRect(0, 0, canvas.width, canvas.height);
-      firstTouch = true;
-
       setMouseCoordinates(event);
+      
+      firstTouch = true;
       isDrawing = true;
 
       
@@ -55,7 +59,6 @@ window.onload = function () {
         context.lineTo(mouseX, mouseY);
         context.stroke();
 
-        
       }
     });
   

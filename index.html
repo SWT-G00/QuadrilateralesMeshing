@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -33,78 +33,42 @@
 <body>
 
 
-  <header class="p-3 text-bg-dark">
+  <header class="p-3 text-bg-light" >
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="./Frontend/pages/about.html" class="nav-link px-2 text-white">About</a></li>
+          <li><a href="./index.html" class="nav-link px-2 text-primary">Home</a></li>
+          <li><a href="./Frontend/pages/features.html" class="nav-link px-2 text-info">Features</a></li>
+          <li><a href="./Frontend/pages/pricing.html" class="nav-link px-2 text-info">Pricing</a></li>
+          <li><a href="./Frontend/pages/about.html" class="nav-link px-2 text-info">About</a></li>
         </ul>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-outline-dark me-2">Login</button>
           <button type="button" class="btn btn-warning">Sign-up</button>
         </div>
       </div>
     </div>
   </header>
-  <div class="p-1"></div>
+  <div class="p-3"></div>
   <main>
 
 
     <div class="container">
       <div class="row flex-row-reverse align-items-center">
         <div class="col-8 ">
-          <canvas class="border" id="paint-canvas" height="400px" width="500px"></canvas>
+          <canvas class=" " id="paint-canvas" height="400px" width="500px" style="border: 5px var(--bs-info-border-subtle) solid"></canvas>
         </div>
         <div class="col-4">
-          <div class="left-block">
-            <div class="colors">
-              <button type="button" value="#0000ff"></button>
-              <button type="button" value="#009fff"></button>
-              <button type="button" value="#0fffff"></button>
-              <button type="button" value="#bfffff"></button>
-              <button type="button" value="#000000"></button>
-              <button type="button" value="#333333"></button>
-              <button type="button" value="#666666"></button>
-              <button type="button" value="#999999"></button>
-              <button type="button" value="#ffcc66"></button>
-              <button type="button" value="#ffcc00"></button>
-              <button type="button" value="#ffff00"></button>
-              <button type="button" value="#ffff99"></button>
-              <button type="button" value="#003300"></button>
-              <button type="button" value="#555000"></button>
-              <button type="button" value="#00ff00"></button>
-              <button type="button" value="#99ff99"></button>
-              <button type="button" value="#f00000"></button>
-              <button type="button" value="#ff6600"></button>
-              <button type="button" value="#ff9933"></button>
-              <button type="button" value="#f5deb3"></button>
-              <button type="button" value="#330000"></button>
-              <button type="button" value="#663300"></button>
-              <button type="button" value="#cc6600"></button>
-              <button type="button" value="#deb887"></button>
-              <button type="button" value="#aa0fff"></button>
-              <button type="button" value="#cc66cc"></button>
-              <button type="button" value="#ff66ff"></button>
-              <button type="button" value="#ff99ff"></button>
-              <button type="button" value="#e8c4e8"></button>
-              <button type="button" value="#ffffff"></button>
-            </div>
-            <div class="brushes">
-              <button type="button" value="1"></button>
-              <button type="button" value="2"></button>
-              <button type="button" value="3"></button>
-              <button type="button" value="4"></button>
-              <button type="button" value="5"></button>
-            </div>
-            <div class="buttons">
-              <button id="clear" type="button">Clear</button>
-              <button id="save" type="button">Save</button>
-            </div>
+          <div>
+            <h1 class="text-primary">Quadrilaterales</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+          </div>
+          <div class="buttons row">
+            <button id="clear" class="btn btn-secondary">Clear</button>
+            <div class="p-1"></div>
+            <button id="save" class="btn btn-info">Save</button>
           </div>
         </div>
       </div>
