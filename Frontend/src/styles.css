@@ -14,5 +14,6 @@ header{
 #paint-canvas {
   cursor:crosshair;
   background-color: aliceblue;
+  border: 5px var(--bs-info-border-subtle) solid
 }
   
