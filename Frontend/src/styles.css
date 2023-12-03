@@ -1,8 +1,15 @@
 
 header{
-  border: 5px var(--bs-info-border-subtle) solid
+  background-image: url("./347449.jpg");
+  height: 130px;
+  background-position: center; /* Center the image */
+  border: 5px var(--bs-info-border-subtle) solid;
+  font-weight: bolder;
+  font-size: large;
+  border-radius: 5px;
 
 }
+
 
 .center {
   margin: auto;
@@ -11,8 +18,25 @@ header{
   padding: 10px;
 }
   
+#navBar{
+  background-color: azure; 
+  border-radius: 5px;
+}
+
 #paint-canvas {
   cursor:crosshair;
-  background-color: aliceblue;
+  background-color: white;
+  border: 5px var(--bs-info-border-subtle) solid;
+  border-radius: 5px;
 }
   
+#save{
+  width: 90px;
+  margin-left: 12px;
+  padding: 4px;
+}
+#clear{
+  width: 90px;
+  margin-left: 12px;
+  padding: 4px;
+}
